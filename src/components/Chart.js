@@ -30,7 +30,7 @@ const Chart = (props) => {
 
     const getForeCastData = async(xcity)=>{
         try{
-            const data = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${xcity}&APPID=${process.env.REACT_APP_API_KEY}&units=metric`);
+            const data = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${xcity}&APPID=${process.env.REACT_APP_API_KEY}&units=metric`);
             const json = await data.json();
             formatter(json.list);
         }catch(err){

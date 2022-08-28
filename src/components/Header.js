@@ -14,7 +14,7 @@ const Header = () => {
     // const [searchTxt, setSearchTxt] = useState('')
 
     useEffect(() => {
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=New York&APPID=${process.env.REACT_APP_API_KEY}&units=metric`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=New York&APPID=${process.env.REACT_APP_API_KEY}&units=metric`)
             .then(res => res.json())
             .then(data => {
                 console.log("data", data);
@@ -29,7 +29,7 @@ const Header = () => {
     }, []);
 
     const getSingleData = (city) => {
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${process.env.REACT_APP_API_KEY}&units=metric`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${process.env.REACT_APP_API_KEY}&units=metric`)
             .then(res => res.json())
             .then(data => {
                 console.log("data", data);
@@ -68,7 +68,7 @@ const Header = () => {
                     className='input'
                 />
                 <h1>{singleData && singleData?.name}</h1>
-                <h1 style={{ fontSize: "36px" }}>{singleData && singleData?.main.temp} °C <img src={`http://openweathermap.org/img/wn/${singleData?.weather[0].icon}@2x.png`} alt="icon" /></h1>
+                <h1 style={{ fontSize: "36px" }}>{singleData && singleData?.main.temp} °C <img src={`https://openweathermap.org/img/wn/${singleData?.weather[0].icon}@2x.png`} alt="icon" /></h1>
                 <h2>{singleData && singleData?.weather[0].main} <span>( {singleData && singleData?.weather[0].description} )</span></h2>
                 <table className='HLtable'>
                     <tbody>
