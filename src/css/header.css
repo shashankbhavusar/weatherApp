@@ -1,0 +1,126 @@
+.headerContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    margin: auto;
+    padding-top: 75px;
+    color: white;
+
+    position: relative;
+}
+
+h1, h2, h3{
+    color: white;
+}
+
+.input{
+    
+    margin-bottom: 30px;
+    height: 36px;
+}
+
+.HLtable{
+    margin: 15px 0 30px 0;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.more{
+    
+    margin-bottom: 30px;
+}
+
+.chartContainer{
+    width: 80%;
+    margin: auto;
+    padding-bottom: 80px;
+}
+
+.chart{
+    background:#f7f7f7;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.alert{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.moreTable{
+    width: 100%;
+}
+
+.ant-collapse {
+    border-radius: 18px;
+}
+
+.ant-collapse-content{
+    border-radius: 0 0 18px 18px !important;
+}
+
+.ant-collapse > .ant-collapse-item:last-child, .ant-collapse > .ant-collapse-item:last-child > .ant-collapse-header{
+    border-radius: 0 0 18px 18px;
+}
+
+@media screen and (max-width:767px)  {
+    .headerContainer{
+        width: 90%;
+    }
+
+    .input{
+        width: 100%;
+    }
+
+    .HLtable{
+        width: 50%;
+    }
+
+    .more{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width:768px)and  (max-width:1199px)  {
+    .headerContainer{
+        width: 80%;
+    }
+    
+    .input{
+        width: 80%;
+    }
+
+    .HLtable{
+        width: 40%;
+    }
+
+    .more{
+        width: 40%;
+    }
+}
+
+@media screen and (min-width:1200px)  {
+    .headerContainer{
+        width: 50%;
+    }
+    
+    .input{
+        width: 70%;
+    }
+
+    .HLtable{
+        width: 30%;
+    }
+
+    .more{
+        width: 30%;
+    }
+}
